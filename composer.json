@@ -1,0 +1,21 @@
+{
+    "name": "nemundo/opensky",
+    "description": "Zugriff auf OpenSky Network Api",
+    "require": {
+        "nemundo/framework": "*",
+        "nemundo/kml": "*"
+    },
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Nemundo\\OpenSky\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Urs Lang",
+            "email": "urs.lang@nemundo.ch"
+        }
+    ]
+}

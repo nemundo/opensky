@@ -1,0 +1,119 @@
+{
+    "app": "OpenSky",
+    "name": "opensky",
+    "namespace": "Nemundo\\OpenSky",
+    "is_deleted": false,
+    "model": [
+        {
+            "template": "default",
+            "model_id": "d762c3ff-e3c2-4e68-bf20-19fc3bcaea43",
+            "label": "Aircraft",
+            "class_name": "Aircraft",
+            "table_name": "opensky_aircraft",
+            "namespace": "Nemundo\\OpenSky\\Data\\Aircraft",
+            "row_class_name": "",
+            "primary_index": "auto_increment",
+            "is_deleted": false,
+            "type": [
+                {
+                    "type": "text",
+                    "label": "Icao24",
+                    "field_name": "icao24",
+                    "variable_name": "icao24",
+                    "allow_null": false,
+                    "is_deleted": false,
+                    "length": "24"
+                },
+                {
+                    "type": "text",
+                    "label": "Callsign",
+                    "field_name": "callsign",
+                    "variable_name": "callsign",
+                    "allow_null": false,
+                    "is_deleted": false,
+                    "length": "20"
+                }
+            ],
+            "index": [
+                {
+                    "index_name": "icao24",
+                    "index_type": "unique_index",
+                    "field_name": [
+                        "icao24"
+                    ]
+                }
+            ]
+        },
+        {
+            "template": "default",
+            "model_id": "bf67cc9f-d07b-48ee-88c1-69c6e3aa8ede",
+            "label": "Country",
+            "class_name": "Country",
+            "table_name": "opensky_country",
+            "namespace": "Nemundo\\OpenSky\\Data\\Country",
+            "row_class_name": "",
+            "primary_index": "auto_increment",
+            "is_deleted": false,
+            "type": [
+                {
+                    "type": "text",
+                    "label": "Country",
+                    "field_name": "country",
+                    "variable_name": "country",
+                    "allow_null": false,
+                    "is_deleted": false,
+                    "length": "255"
+                }
+            ],
+            "index": [
+                {
+                    "index_name": "country",
+                    "index_type": "unique_index",
+                    "field_name": [
+                        "country"
+                    ]
+                }
+            ]
+        },
+        {
+            "template": "default",
+            "model_id": "d503ef5c-faa3-4f23-a5f0-a588dd42d07e",
+            "label": "Tracking",
+            "class_name": "Tracking",
+            "table_name": "opensky_tracking",
+            "namespace": "Nemundo\\OpenSky\\Data\\Tracking",
+            "row_class_name": "",
+            "primary_index": "auto_increment",
+            "is_deleted": false,
+            "type": [
+                {
+                    "type": "external",
+                    "label": "Aircraft",
+                    "field_name": "aircraft",
+                    "variable_name": "aircraft",
+                    "allow_null": false,
+                    "is_deleted": false,
+                    "external_model_id": "d762c3ff-e3c2-4e68-bf20-19fc3bcaea43"
+                },
+                {
+                    "type": "geo_coordinate_altitude",
+                    "label": "Position",
+                    "field_name": "position",
+                    "variable_name": "position",
+                    "allow_null": false,
+                    "is_deleted": false
+                }
+            ],
+            "index": [
+                {
+                    "index_name": "aircraft_id",
+                    "index_type": "index",
+                    "field_name": [
+                        "aircraft",
+                        "id"
+                    ]
+                }
+            ]
+        }
+    ]
+}
