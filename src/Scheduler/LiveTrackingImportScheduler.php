@@ -10,8 +10,11 @@ class LiveTrackingImportScheduler extends AbstractScheduler
     protected function loadScheduler()
     {
 
-        $this->consoleScript=true;
-        $this->scriptName='opensky-live-tracking';
+        $this->overrideSetting = false;
+        $this->minute = 2;
+
+        $this->consoleScript = true;
+        $this->scriptName = 'opensky-live-tracking';
 
 
     }

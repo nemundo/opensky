@@ -24,7 +24,7 @@ composer require nemundo/opensky
 
 ### Installation
 ```
-composer config repositories.roundshot vcs https://github.com/nemundo/opensky
+composer config repositories.opensky vcs https://github.com/nemundo/opensky
 composer require nemundo/opensky
 ```
 
