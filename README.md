@@ -9,8 +9,6 @@ https://opensky-network.org/
 composer require nemundo/opensky
 ```
 
-
-
 ### composer.json
 ```
 "repositories":[
@@ -27,6 +25,15 @@ composer require nemundo/opensky
 composer config repositories.opensky vcs https://github.com/nemundo/opensky
 composer require nemundo/opensky
 ```
+
+
+### Php Installation
+```
+(new \Nemundo\OpenSky\Application\OpenSkyApplication())->installApp();
+```
+
+
+
 
 ### Import
 ```
